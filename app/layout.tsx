@@ -1,26 +1,41 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
-const inter = Inter({ subsets: ['latin'] })
+// layout.tsx
+import { Metadata } from 'next';
+import './globals.css';
+import { Montserrat, Karla } from 'next/font/google'
+
+export const karla = Karla({
+  weight: ['300', '400', '500', '600', '700'],
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-karla',
+
+})
+export const montserrat = Montserrat({
+  weight: ['300', '400', '500', '600', '700', '900'],
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-mont',
+})
+
 
 export const metadata: Metadata = {
   title: 'True Origin Foods',
   description: 'Series of thought I share on web development',
-}
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
-
+  // console.log(roboto.className)
   return (
-
-    <html lang="en">
-      <body className={inter.className}>
+    <>
+      <body className={`${karla.variable} ${montserrat.variable} font-sans`}>
         {children}
       </body>
-
-    </html>
-  )
+    </>
+  );
 }

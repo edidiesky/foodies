@@ -21,9 +21,12 @@ module.exports = {
         custom: "1fr 50%",
         custom_2: "45% 1fr",
         custom_3: "35% 1fr",
+        custom_4: "1fr 40%",
       },
       // Blog_Styles
       fontFamily: {
+        font_sans: ["var(--font-mont)"],
+        font_karla: ["--font-karla"],
         shop_bold: ["Bold", "sans-serif"],
         shop_italic: ["Italic", "sans-serif"],
         shop_semibold: ["SemiBold", "sans-serif"],
